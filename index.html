@@ -4,231 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>CAE Simulation Training</title>
     <style>
-        /* Start Global Rules */
-        * {
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: 'Open Sans', sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #e0f7fa; /* Light cyan background */
             margin: 0;
+            padding: 20px;
         }
 
-        .container {
-            padding-left: 15px;
-            padding-right: 15px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Small */
-        @media (min-width: 768px) {
-            .container {
-                width: 750px;
-            }
-        }
-
-        /* Medium */
-        @media (min-width: 992px) {
-            .container {
-                width: 970px;
-            }
-        }
-
-        /* Large */
-        @media (min-width: 1200px) {
-            .container {
-                width: 1170px;
-            }
-        }
-
-        /* End Global Rules */
-
-        /* Start Landing Page */
-        .landing-page header {
-            min-height: 80px;
-            display: flex;
-        }
-
-        @media (max-width: 767px) {
-            .landing-page header {
-                min-height: auto;
-                display: initial;
-            }
-        }
-
-        .landing-page header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        @media (max-width: 767px) {
-            .landing-page header .container {
-                flex-direction: column;
-                justify-content: center;
-            }
-        }
-
-        .landing-page header .logo {
-            color: #5d5d5d;
-            font-style: italic;
-            text-transform: uppercase;
-            font-size: 20px;
-        }
-
-        @media (max-width: 767px) {
-            .landing-page header .logo {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }
-        }
-
-        .landing-page header .links {
-            display: flex;
-            align-items: center;
-        }
-
-        @media (max-width: 767px) {
-            .landing-page header .links {
-                text-align: center;
-                gap: 10px;
-            }
-        }
-
-        .landing-page header .links li {
-            margin-left: 30px;
-            color: #5d5d5d;
-            cursor: pointer;
-            transition: .3s;
-        }
-
-        @media (max-width: 767px) {
-            .landing-page header .links li {
-                margin-left: auto;
-            }
-        }
-
-        .landing-page header .links li:last-child {
-            border-radius: 20px;
-            padding: 10px 20px;
-            color: #FFF;
-            background-color: #6c63ff;
-        }
-
-        .landing-page header .links li:not(:last-child):hover {
-            color: #6c63ff;
-        }
-
-        .landing-page .content .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 140px;
-            min-height: calc(100vh - 80px);
-        }
-
-        @media (max-width: 767px) {
-            .landing-page .content .container {
-                gap: 0;
-                min-height: calc(100vh - 101px);
-                justify-content: center;
-                flex-direction: column-reverse;
-            }
-        }
-
-        @media (max-width: 767px) {
-            .landing-page .content .info {
-                text-align: center;
-                margin-bottom: 15px
-            }
-        }
-
-        .landing-page .content .info {
-            color: #5d5d5d;
-            font-size: 44px;
-        }
-
-        .landing-page .content .info p {
-            margin: 0;
-            line-height: 1.6;
-            font-size: 15px;
-            color: #5d5d5d;
-        }
-
-        .landing-page .content .info button {
-            border: 0;
-            border-radius: 20px;
-            padding: 12px 30px;
-            margin-top: 30px;
-            cursor: pointer;
-            color: #FFF;
-            background-color: #6c63ff;
-        }
-
-        .landing-page .content .image img {
-            max-width: 100%;
-        }
-        h5{
-            color: #FFF;
-            background-color: #6c63ff;
-            border: 2px solid black;
-            position: relative;
+        header {
             text-align: center;
-            width: 10em;
-            height: 50px;
+            margin-bottom: 20px;
+        }
+
+        header img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        header h1 {
+            font-size: 26px;
+            text-transform: uppercase;
+            margin: 0;
+            color: #00695c; /* Teal color */
+        }
+
+        .landing-page {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid #00897b; /* Teal border */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        h2 {
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #004d40; /* Dark teal color */
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h5 {
+            background-color: #00796b; /* Medium teal background */
+            border: 3px solid #b2dfdb;
+
+            width: 15em; /* Increased width */
+            height: 60px; /* Increased height */
             border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+            color: #FFF;
+            font-size: 18px; /* Larger font size */
+        }
+
+        h5:hover {
+            background-color: #004d40; /* Dark teal on hover */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h5 {
+                width: 80%; /* Full width on smaller screens */
+                margin: 10px auto; /* Centering */
+            }
+
+            h2 {
+                font-size: 20px; /* Smaller font for mobile */
+            }
         }
         a{
-            color: #FFF;
+            color: whitesmoke;
+            text-decoration: none;
         }
-
-        /* End Landing Page */
     </style>
 </head>
 
 <body>
-    <!-- Start Landing Page -->
+    <header>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJOtMlU4h8E4mfpgL1LxAi7j9peIdInZHsKlPfg3ciMColbQXYFZRGndw4hADpGQQ5rDEo5xZMQ4cRWaxaDhnwyRrVTob6VwD79xfVKDPWwReIJKj4KSWpKUdWZrNZzxPirQuwq1d2hhK5K9JUQYgt0Yv8XuJdzoGX25MOIhjAUsSmY4HBThol1e-KXvQ/s367/CEA-removebg-preview.png"
+            alt="CAE Simulation Training Private Limited">
+        <h1>CAE Simulation Training Private Limited</h1>
+    </header>
+
     <div class="landing-page">
-        <header>
-            <div class="container">
-                <a href="#" class="logo"><b>CAE SIMULATION TRAINING PVT LTD</b></a>
-                <ul class="links">
-                    <!-- <li>Home</li> -->
-                    <li>About Us</li>
-                    <!-- <li>Work</li> -->
-                    <!-- <li>Info</li> -->
-                    <li><a href="https://3nobita.github.io/10k_Head_land/">Head</a></li>
-                </ul>
-            </div>
-        </header>
         <div class="content">
-            <div class="container">
-                <div class="info">
-                    <h5><a href="https://3nobita.github.io/10k_driver/">Driver</a></h5>
-                    <h5><a href="https://3nobita.github.io/10K_Emp_Land./">Empolyee</a></h5>
-                    <h5><a href="https://3nobita.github.io/10k_HOD_land/">HOD</a></h5>
-
-
-                </div>
-                <div class="image">
-                    <img src="https://i.postimg.cc/65QxYYzh/001234.png">
-                </div>
+            <div class="info">
+                <h5><a href="https://3nobita.github.io/10k_driver/">Driver</a></h5>
+                <h5><a href="https://3nobita.github.io/10K_Emp_Land./">Employee</a></h5>
+                <h5><a href="https://3nobita.github.io/10k_HOD_land/">HOD</a></h5>
+                <h5><a href="https://3nobita.github.io/10k_Head_land/">Head</a></h5>
             </div>
         </div>
     </div>
-    <!-- End Landing Page -->
 </body>
 
 </html>
