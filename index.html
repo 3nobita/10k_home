@@ -45,24 +45,17 @@
             margin-top: 20px;
         }
 
-        h2 {
-            margin-bottom: 25px;
-            font-size: 24px;
-            color: #004d40; /* Dark teal color */
-        }
-
         .info {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        h5 {
+        .styled-button {
             background-color: #00796b; /* Medium teal background */
             border: 3px solid #b2dfdb;
-
-            width: 15em; /* Increased width */
-            height: 60px; /* Increased height */
+            width: 15em; /* Fixed width */
+            height: 60px; /* Fixed height */
             border-radius: 5px;
             display: flex;
             justify-content: center;
@@ -71,24 +64,21 @@
             transition: background-color 0.3s;
             color: #FFF;
             font-size: 18px; /* Larger font size */
+            cursor: pointer;
         }
 
-        h5:hover {
+        .styled-button:hover {
             background-color: #004d40; /* Dark teal on hover */
         }
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
-            h5 {
+            .styled-button {
                 width: 80%; /* Full width on smaller screens */
-                margin: 10px auto; /* Centering */
-            }
-
-            h2 {
-                font-size: 20px; /* Smaller font for mobile */
             }
         }
-        a{
+
+        a {
             color: whitesmoke;
             text-decoration: none;
         }
@@ -105,10 +95,10 @@
     <div class="landing-page">
         <div class="content">
             <div class="info">
-                <h5><a href="https://3nobita.github.io/10k_driver/">Driver</a></h5>
-                <h5><a href="https://3nobita.github.io/10K_Emp_Land./">Employee</a></h5>
-                <h5><a href="https://3nobita.github.io/10k_HOD_land/">HOD</a></h5>
-                <h5><a href="https://3nobita.github.io/10k_Head_land/">Head</a></h5>
+                <button class="styled-button" onclick="window.location.href='https://3nobita.github.io/10k_driver/'">Driver</button>
+                <button class="styled-button" onclick="window.location.href='https://3nobita.github.io/10K_Emp_Land./'">Employee</button>
+                <button class="styled-button" onclick="window.location.href='https://3nobita.github.io/10k_HOD_land/'">HOD</button>
+                <button class="styled-button" onclick="window.location.href='https://3nobita.github.io/10k_Head_land/'">Head</button>
             </div>
         </div>
     </div>
